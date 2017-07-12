@@ -35,15 +35,6 @@ public class PageHtmlServlet
         ViewerHtmlHandler handler = Utils.createViewerHtmlHandler();
 
         HtmlOptions o = new HtmlOptions();
-    	Watermark watermark = new Watermark("atirtahir");
-		//Set color for watermark with values Red, Green, Blue and Alpha(Transparency) 
-		Color watermarkColor = new Color(200, 85, 75, 100);
-		watermark.setColor(watermarkColor);
-		watermark.setPosition(WatermarkPosition.BottomRight);
-		watermark.setWidth(50f); 
-		
-		o.setWatermark(watermark);
-
         int pageNumber = Integer.valueOf(request.getParameter("page"));
         o.setPageNumbersToRender(Arrays.asList(pageNumber));
         o.setPageNumber(pageNumber);
